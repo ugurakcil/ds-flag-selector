@@ -1,0 +1,1058 @@
+@function retina-size($value) {
+    @return floor($value / 2);
+  }
+  
+  @mixin retina-bg-size($spriteWidth, $spriteHeight) {
+    background-size: floor($spriteWidth / 2) floor($spriteHeight / 2);
+  }
+  
+  .dsflag__flag {
+    $item-width-maps: (ac: 20px, ad: 20px, ae: 20px, af: 20px, ag: 20px, ai: 20px, al: 20px, am: 20px, ao: 20px, aq: 20px, ar: 20px, as: 20px, at: 20px, au: 20px, aw: 20px, ax: 20px, az: 20px, ba: 20px, bb: 20px, bd: 20px, be: 18px, bf: 20px, bg: 20px, bh: 20px, bi: 20px, bj: 20px, bl: 20px, bm: 20px, bn: 20px, bo: 20px, bq: 20px, br: 20px, bs: 20px, bt: 20px, bv: 20px, bw: 20px, by: 20px, bz: 20px, ca: 20px, cc: 20px, cd: 20px, cf: 20px, cg: 20px, ch: 15px, ci: 20px, ck: 20px, cl: 20px, cm: 20px, cn: 20px, co: 20px, cp: 20px, cr: 20px, cu: 20px, cv: 20px, cw: 20px, cx: 20px, cy: 20px, cz: 20px, de: 20px, dg: 20px, dj: 20px, dk: 20px, dm: 20px, do: 20px, dz: 20px, ea: 20px, ec: 20px, ee: 20px, eg: 20px, eh: 20px, er: 20px, es: 20px, et: 20px, eu: 20px, fi: 20px, fj: 20px, fk: 20px, fm: 20px, fo: 20px, fr: 20px, ga: 20px, gb: 20px, gd: 20px, ge: 20px, gf: 20px, gg: 20px, gh: 20px, gi: 20px, gl: 20px, gm: 20px, gn: 20px, gp: 20px, gq: 20px, gr: 20px, gs: 20px, gt: 20px, gu: 20px, gw: 20px, gy: 20px, hk: 20px, hm: 20px, hn: 20px, hr: 20px, ht: 20px, hu: 20px, ic: 20px, id: 20px, ie: 20px, il: 20px, im: 20px, in: 20px, io: 20px, iq: 20px, ir: 20px, is: 20px, it: 20px, je: 20px, jm: 20px, jo: 20px, jp: 20px, ke: 20px, kg: 20px, kh: 20px, ki: 20px, km: 20px, kn: 20px, kp: 20px, kr: 20px, kw: 20px, ky: 20px, kz: 20px, la: 20px, lb: 20px, lc: 20px, li: 20px, lk: 20px, lr: 20px, ls: 20px, lt: 20px, lu: 20px, lv: 20px, ly: 20px, ma: 20px, mc: 19px, md: 20px, me: 20px, mf: 20px, mg: 20px, mh: 20px, mk: 20px, ml: 20px, mm: 20px, mn: 20px, mo: 20px, mp: 20px, mq: 20px, mr: 20px, ms: 20px, mt: 20px, mu: 20px, mv: 20px, mw: 20px, mx: 20px, my: 20px, mz: 20px, na: 20px, nc: 20px, ne: 18px, nf: 20px, ng: 20px, ni: 20px, nl: 20px, no: 20px, np: 13px, nr: 20px, nu: 20px, nz: 20px, om: 20px, pa: 20px, pe: 20px, pf: 20px, pg: 20px, ph: 20px, pk: 20px, pl: 20px, pm: 20px, pn: 20px, pr: 20px, ps: 20px, pt: 20px, pw: 20px, py: 20px, qa: 20px, re: 20px, ro: 20px, rs: 20px, ru: 20px, rw: 20px, sa: 20px, sb: 20px, sc: 20px, sd: 20px, se: 20px, sg: 20px, sh: 20px, si: 20px, sj: 20px, sk: 20px, sl: 20px, sm: 20px, sn: 20px, so: 20px, sr: 20px, ss: 20px, st: 20px, sv: 20px, sx: 20px, sy: 20px, sz: 20px, ta: 20px, tc: 20px, td: 20px, tf: 20px, tg: 20px, th: 20px, tj: 20px, tk: 20px, tl: 20px, tm: 20px, tn: 20px, to: 20px, tr: 20px, tt: 20px, tv: 20px, tw: 20px, tz: 20px, ua: 20px, ug: 20px, um: 20px, un: 20px, us: 20px, uy: 20px, uz: 20px, va: 15px, vc: 20px, ve: 20px, vg: 20px, vi: 20px, vn: 20px, vu: 20px, wf: 20px, ws: 20px, xk: 20px, ye: 20px, yt: 20px, za: 20px, zm: 20px, zw: 20px, );
+    $standard-country: 'ac';
+    width: map-get($item-width-maps, $standard-country);
+  
+    @each $key, $width in $item-width-maps {
+      @if $width != map-get($item-width-maps, $standard-country) {
+        &.dsflag__#{$key} {
+          width: $width;
+        }
+      }
+    }
+  
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-size: 5652px 15px;
+    }
+  
+    &.dsflag__ac {
+      height: 10px;
+      background-posdsflagon: 0px 0px;
+    }
+    &.dsflag__ad {
+      height: 14px;
+      background-posdsflagon: -22px 0px;
+    }
+    &.dsflag__ae {
+      height: 10px;
+      background-posdsflagon: -44px 0px;
+    }
+    &.dsflag__af {
+      height: 14px;
+      background-posdsflagon: -66px 0px;
+    }
+    &.dsflag__ag {
+      height: 14px;
+      background-posdsflagon: -88px 0px;
+    }
+    &.dsflag__ai {
+      height: 10px;
+      background-posdsflagon: -110px 0px;
+    }
+    &.dsflag__al {
+      height: 15px;
+      background-posdsflagon: -132px 0px;
+    }
+    &.dsflag__am {
+      height: 10px;
+      background-posdsflagon: -154px 0px;
+    }
+    &.dsflag__ao {
+      height: 14px;
+      background-posdsflagon: -176px 0px;
+    }
+    &.dsflag__aq {
+      height: 14px;
+      background-posdsflagon: -198px 0px;
+    }
+    &.dsflag__ar {
+      height: 13px;
+      background-posdsflagon: -220px 0px;
+    }
+    &.dsflag__as {
+      height: 10px;
+      background-posdsflagon: -242px 0px;
+    }
+    &.dsflag__at {
+      height: 14px;
+      background-posdsflagon: -264px 0px;
+    }
+    &.dsflag__au {
+      height: 10px;
+      background-posdsflagon: -286px 0px;
+    }
+    &.dsflag__aw {
+      height: 14px;
+      background-posdsflagon: -308px 0px;
+    }
+    &.dsflag__ax {
+      height: 13px;
+      background-posdsflagon: -330px 0px;
+    }
+    &.dsflag__az {
+      height: 10px;
+      background-posdsflagon: -352px 0px;
+    }
+    &.dsflag__ba {
+      height: 10px;
+      background-posdsflagon: -374px 0px;
+    }
+    &.dsflag__bb {
+      height: 14px;
+      background-posdsflagon: -396px 0px;
+    }
+    &.dsflag__bd {
+      height: 12px;
+      background-posdsflagon: -418px 0px;
+    }
+    &.dsflag__be {
+      height: 15px;
+      background-posdsflagon: -440px 0px;
+    }
+    &.dsflag__bf {
+      height: 14px;
+      background-posdsflagon: -460px 0px;
+    }
+    &.dsflag__bg {
+      height: 12px;
+      background-posdsflagon: -482px 0px;
+    }
+    &.dsflag__bh {
+      height: 12px;
+      background-posdsflagon: -504px 0px;
+    }
+    &.dsflag__bi {
+      height: 12px;
+      background-posdsflagon: -526px 0px;
+    }
+    &.dsflag__bj {
+      height: 14px;
+      background-posdsflagon: -548px 0px;
+    }
+    &.dsflag__bl {
+      height: 14px;
+      background-posdsflagon: -570px 0px;
+    }
+    &.dsflag__bm {
+      height: 10px;
+      background-posdsflagon: -592px 0px;
+    }
+    &.dsflag__bn {
+      height: 10px;
+      background-posdsflagon: -614px 0px;
+    }
+    &.dsflag__bo {
+      height: 14px;
+      background-posdsflagon: -636px 0px;
+    }
+    &.dsflag__bq {
+      height: 14px;
+      background-posdsflagon: -658px 0px;
+    }
+    &.dsflag__br {
+      height: 14px;
+      background-posdsflagon: -680px 0px;
+    }
+    &.dsflag__bs {
+      height: 10px;
+      background-posdsflagon: -702px 0px;
+    }
+    &.dsflag__bt {
+      height: 14px;
+      background-posdsflagon: -724px 0px;
+    }
+    &.dsflag__bv {
+      height: 15px;
+      background-posdsflagon: -746px 0px;
+    }
+    &.dsflag__bw {
+      height: 14px;
+      background-posdsflagon: -768px 0px;
+    }
+    &.dsflag__by {
+      height: 10px;
+      background-posdsflagon: -790px 0px;
+    }
+    &.dsflag__bz {
+      height: 14px;
+      background-posdsflagon: -812px 0px;
+    }
+    &.dsflag__ca {
+      height: 10px;
+      background-posdsflagon: -834px 0px;
+    }
+    &.dsflag__cc {
+      height: 10px;
+      background-posdsflagon: -856px 0px;
+    }
+    &.dsflag__cd {
+      height: 15px;
+      background-posdsflagon: -878px 0px;
+    }
+    &.dsflag__cf {
+      height: 14px;
+      background-posdsflagon: -900px 0px;
+    }
+    &.dsflag__cg {
+      height: 14px;
+      background-posdsflagon: -922px 0px;
+    }
+    &.dsflag__ch {
+      height: 15px;
+      background-posdsflagon: -944px 0px;
+    }
+    &.dsflag__ci {
+      height: 14px;
+      background-posdsflagon: -961px 0px;
+    }
+    &.dsflag__ck {
+      height: 10px;
+      background-posdsflagon: -983px 0px;
+    }
+    &.dsflag__cl {
+      height: 14px;
+      background-posdsflagon: -1005px 0px;
+    }
+    &.dsflag__cm {
+      height: 14px;
+      background-posdsflagon: -1027px 0px;
+    }
+    &.dsflag__cn {
+      height: 14px;
+      background-posdsflagon: -1049px 0px;
+    }
+    &.dsflag__co {
+      height: 14px;
+      background-posdsflagon: -1071px 0px;
+    }
+    &.dsflag__cp {
+      height: 14px;
+      background-posdsflagon: -1093px 0px;
+    }
+    &.dsflag__cr {
+      height: 12px;
+      background-posdsflagon: -1115px 0px;
+    }
+    &.dsflag__cu {
+      height: 10px;
+      background-posdsflagon: -1137px 0px;
+    }
+    &.dsflag__cv {
+      height: 12px;
+      background-posdsflagon: -1159px 0px;
+    }
+    &.dsflag__cw {
+      height: 14px;
+      background-posdsflagon: -1181px 0px;
+    }
+    &.dsflag__cx {
+      height: 10px;
+      background-posdsflagon: -1203px 0px;
+    }
+    &.dsflag__cy {
+      height: 14px;
+      background-posdsflagon: -1225px 0px;
+    }
+    &.dsflag__cz {
+      height: 14px;
+      background-posdsflagon: -1247px 0px;
+    }
+    &.dsflag__de {
+      height: 12px;
+      background-posdsflagon: -1269px 0px;
+    }
+    &.dsflag__dg {
+      height: 10px;
+      background-posdsflagon: -1291px 0px;
+    }
+    &.dsflag__dj {
+      height: 14px;
+      background-posdsflagon: -1313px 0px;
+    }
+    &.dsflag__dk {
+      height: 15px;
+      background-posdsflagon: -1335px 0px;
+    }
+    &.dsflag__dm {
+      height: 10px;
+      background-posdsflagon: -1357px 0px;
+    }
+    &.dsflag__do {
+      height: 14px;
+      background-posdsflagon: -1379px 0px;
+    }
+    &.dsflag__dz {
+      height: 14px;
+      background-posdsflagon: -1401px 0px;
+    }
+    &.dsflag__ea {
+      height: 14px;
+      background-posdsflagon: -1423px 0px;
+    }
+    &.dsflag__ec {
+      height: 14px;
+      background-posdsflagon: -1445px 0px;
+    }
+    &.dsflag__ee {
+      height: 13px;
+      background-posdsflagon: -1467px 0px;
+    }
+    &.dsflag__eg {
+      height: 14px;
+      background-posdsflagon: -1489px 0px;
+    }
+    &.dsflag__eh {
+      height: 10px;
+      background-posdsflagon: -1511px 0px;
+    }
+    &.dsflag__er {
+      height: 10px;
+      background-posdsflagon: -1533px 0px;
+    }
+    &.dsflag__es {
+      height: 14px;
+      background-posdsflagon: -1555px 0px;
+    }
+    &.dsflag__et {
+      height: 10px;
+      background-posdsflagon: -1577px 0px;
+    }
+    &.dsflag__eu {
+      height: 14px;
+      background-posdsflagon: -1599px 0px;
+    }
+    &.dsflag__fi {
+      height: 12px;
+      background-posdsflagon: -1621px 0px;
+    }
+    &.dsflag__fj {
+      height: 10px;
+      background-posdsflagon: -1643px 0px;
+    }
+    &.dsflag__fk {
+      height: 10px;
+      background-posdsflagon: -1665px 0px;
+    }
+    &.dsflag__fm {
+      height: 11px;
+      background-posdsflagon: -1687px 0px;
+    }
+    &.dsflag__fo {
+      height: 15px;
+      background-posdsflagon: -1709px 0px;
+    }
+    &.dsflag__fr {
+      height: 14px;
+      background-posdsflagon: -1731px 0px;
+    }
+    &.dsflag__ga {
+      height: 15px;
+      background-posdsflagon: -1753px 0px;
+    }
+    &.dsflag__gb {
+      height: 10px;
+      background-posdsflagon: -1775px 0px;
+    }
+    &.dsflag__gd {
+      height: 12px;
+      background-posdsflagon: -1797px 0px;
+    }
+    &.dsflag__ge {
+      height: 14px;
+      background-posdsflagon: -1819px 0px;
+    }
+    &.dsflag__gf {
+      height: 14px;
+      background-posdsflagon: -1841px 0px;
+    }
+    &.dsflag__gg {
+      height: 14px;
+      background-posdsflagon: -1863px 0px;
+    }
+    &.dsflag__gh {
+      height: 14px;
+      background-posdsflagon: -1885px 0px;
+    }
+    &.dsflag__gi {
+      height: 10px;
+      background-posdsflagon: -1907px 0px;
+    }
+    &.dsflag__gl {
+      height: 14px;
+      background-posdsflagon: -1929px 0px;
+    }
+    &.dsflag__gm {
+      height: 14px;
+      background-posdsflagon: -1951px 0px;
+    }
+    &.dsflag__gn {
+      height: 14px;
+      background-posdsflagon: -1973px 0px;
+    }
+    &.dsflag__gp {
+      height: 14px;
+      background-posdsflagon: -1995px 0px;
+    }
+    &.dsflag__gq {
+      height: 14px;
+      background-posdsflagon: -2017px 0px;
+    }
+    &.dsflag__gr {
+      height: 14px;
+      background-posdsflagon: -2039px 0px;
+    }
+    &.dsflag__gs {
+      height: 10px;
+      background-posdsflagon: -2061px 0px;
+    }
+    &.dsflag__gt {
+      height: 13px;
+      background-posdsflagon: -2083px 0px;
+    }
+    &.dsflag__gu {
+      height: 11px;
+      background-posdsflagon: -2105px 0px;
+    }
+    &.dsflag__gw {
+      height: 10px;
+      background-posdsflagon: -2127px 0px;
+    }
+    &.dsflag__gy {
+      height: 12px;
+      background-posdsflagon: -2149px 0px;
+    }
+    &.dsflag__hk {
+      height: 14px;
+      background-posdsflagon: -2171px 0px;
+    }
+    &.dsflag__hm {
+      height: 10px;
+      background-posdsflagon: -2193px 0px;
+    }
+    &.dsflag__hn {
+      height: 10px;
+      background-posdsflagon: -2215px 0px;
+    }
+    &.dsflag__hr {
+      height: 10px;
+      background-posdsflagon: -2237px 0px;
+    }
+    &.dsflag__ht {
+      height: 12px;
+      background-posdsflagon: -2259px 0px;
+    }
+    &.dsflag__hu {
+      height: 10px;
+      background-posdsflagon: -2281px 0px;
+    }
+    &.dsflag__ic {
+      height: 14px;
+      background-posdsflagon: -2303px 0px;
+    }
+    &.dsflag__id {
+      height: 14px;
+      background-posdsflagon: -2325px 0px;
+    }
+    &.dsflag__ie {
+      height: 10px;
+      background-posdsflagon: -2347px 0px;
+    }
+    &.dsflag__il {
+      height: 15px;
+      background-posdsflagon: -2369px 0px;
+    }
+    &.dsflag__im {
+      height: 10px;
+      background-posdsflagon: -2391px 0px;
+    }
+    &.dsflag__in {
+      height: 14px;
+      background-posdsflagon: -2413px 0px;
+    }
+    &.dsflag__io {
+      height: 10px;
+      background-posdsflagon: -2435px 0px;
+    }
+    &.dsflag__iq {
+      height: 14px;
+      background-posdsflagon: -2457px 0px;
+    }
+    &.dsflag__ir {
+      height: 12px;
+      background-posdsflagon: -2479px 0px;
+    }
+    &.dsflag__is {
+      height: 15px;
+      background-posdsflagon: -2501px 0px;
+    }
+    &.dsflag__it {
+      height: 14px;
+      background-posdsflagon: -2523px 0px;
+    }
+    &.dsflag__je {
+      height: 12px;
+      background-posdsflagon: -2545px 0px;
+    }
+    &.dsflag__jm {
+      height: 10px;
+      background-posdsflagon: -2567px 0px;
+    }
+    &.dsflag__jo {
+      height: 10px;
+      background-posdsflagon: -2589px 0px;
+    }
+    &.dsflag__jp {
+      height: 14px;
+      background-posdsflagon: -2611px 0px;
+    }
+    &.dsflag__ke {
+      height: 14px;
+      background-posdsflagon: -2633px 0px;
+    }
+    &.dsflag__kg {
+      height: 12px;
+      background-posdsflagon: -2655px 0px;
+    }
+    &.dsflag__kh {
+      height: 13px;
+      background-posdsflagon: -2677px 0px;
+    }
+    &.dsflag__ki {
+      height: 10px;
+      background-posdsflagon: -2699px 0px;
+    }
+    &.dsflag__km {
+      height: 12px;
+      background-posdsflagon: -2721px 0px;
+    }
+    &.dsflag__kn {
+      height: 14px;
+      background-posdsflagon: -2743px 0px;
+    }
+    &.dsflag__kp {
+      height: 10px;
+      background-posdsflagon: -2765px 0px;
+    }
+    &.dsflag__kr {
+      height: 14px;
+      background-posdsflagon: -2787px 0px;
+    }
+    &.dsflag__kw {
+      height: 10px;
+      background-posdsflagon: -2809px 0px;
+    }
+    &.dsflag__ky {
+      height: 10px;
+      background-posdsflagon: -2831px 0px;
+    }
+    &.dsflag__kz {
+      height: 10px;
+      background-posdsflagon: -2853px 0px;
+    }
+    &.dsflag__la {
+      height: 14px;
+      background-posdsflagon: -2875px 0px;
+    }
+    &.dsflag__lb {
+      height: 14px;
+      background-posdsflagon: -2897px 0px;
+    }
+    &.dsflag__lc {
+      height: 10px;
+      background-posdsflagon: -2919px 0px;
+    }
+    &.dsflag__li {
+      height: 12px;
+      background-posdsflagon: -2941px 0px;
+    }
+    &.dsflag__lk {
+      height: 10px;
+      background-posdsflagon: -2963px 0px;
+    }
+    &.dsflag__lr {
+      height: 11px;
+      background-posdsflagon: -2985px 0px;
+    }
+    &.dsflag__ls {
+      height: 14px;
+      background-posdsflagon: -3007px 0px;
+    }
+    &.dsflag__lt {
+      height: 12px;
+      background-posdsflagon: -3029px 0px;
+    }
+    &.dsflag__lu {
+      height: 12px;
+      background-posdsflagon: -3051px 0px;
+    }
+    &.dsflag__lv {
+      height: 10px;
+      background-posdsflagon: -3073px 0px;
+    }
+    &.dsflag__ly {
+      height: 10px;
+      background-posdsflagon: -3095px 0px;
+    }
+    &.dsflag__ma {
+      height: 14px;
+      background-posdsflagon: -3117px 0px;
+    }
+    &.dsflag__mc {
+      height: 15px;
+      background-posdsflagon: -3139px 0px;
+    }
+    &.dsflag__md {
+      height: 10px;
+      background-posdsflagon: -3160px 0px;
+    }
+    &.dsflag__me {
+      height: 10px;
+      background-posdsflagon: -3182px 0px;
+    }
+    &.dsflag__mf {
+      height: 14px;
+      background-posdsflagon: -3204px 0px;
+    }
+    &.dsflag__mg {
+      height: 14px;
+      background-posdsflagon: -3226px 0px;
+    }
+    &.dsflag__mh {
+      height: 11px;
+      background-posdsflagon: -3248px 0px;
+    }
+    &.dsflag__mk {
+      height: 10px;
+      background-posdsflagon: -3270px 0px;
+    }
+    &.dsflag__ml {
+      height: 14px;
+      background-posdsflagon: -3292px 0px;
+    }
+    &.dsflag__mm {
+      height: 14px;
+      background-posdsflagon: -3314px 0px;
+    }
+    &.dsflag__mn {
+      height: 10px;
+      background-posdsflagon: -3336px 0px;
+    }
+    &.dsflag__mo {
+      height: 14px;
+      background-posdsflagon: -3358px 0px;
+    }
+    &.dsflag__mp {
+      height: 10px;
+      background-posdsflagon: -3380px 0px;
+    }
+    &.dsflag__mq {
+      height: 14px;
+      background-posdsflagon: -3402px 0px;
+    }
+    &.dsflag__mr {
+      height: 14px;
+      background-posdsflagon: -3424px 0px;
+    }
+    &.dsflag__ms {
+      height: 10px;
+      background-posdsflagon: -3446px 0px;
+    }
+    &.dsflag__mt {
+      height: 14px;
+      background-posdsflagon: -3468px 0px;
+    }
+    &.dsflag__mu {
+      height: 14px;
+      background-posdsflagon: -3490px 0px;
+    }
+    &.dsflag__mv {
+      height: 14px;
+      background-posdsflagon: -3512px 0px;
+    }
+    &.dsflag__mw {
+      height: 14px;
+      background-posdsflagon: -3534px 0px;
+    }
+    &.dsflag__mx {
+      height: 12px;
+      background-posdsflagon: -3556px 0px;
+    }
+    &.dsflag__my {
+      height: 10px;
+      background-posdsflagon: -3578px 0px;
+    }
+    &.dsflag__mz {
+      height: 14px;
+      background-posdsflagon: -3600px 0px;
+    }
+    &.dsflag__na {
+      height: 14px;
+      background-posdsflagon: -3622px 0px;
+    }
+    &.dsflag__nc {
+      height: 10px;
+      background-posdsflagon: -3644px 0px;
+    }
+    &.dsflag__ne {
+      height: 15px;
+      background-posdsflagon: -3666px 0px;
+    }
+    &.dsflag__nf {
+      height: 10px;
+      background-posdsflagon: -3686px 0px;
+    }
+    &.dsflag__ng {
+      height: 10px;
+      background-posdsflagon: -3708px 0px;
+    }
+    &.dsflag__ni {
+      height: 12px;
+      background-posdsflagon: -3730px 0px;
+    }
+    &.dsflag__nl {
+      height: 14px;
+      background-posdsflagon: -3752px 0px;
+    }
+    &.dsflag__no {
+      height: 15px;
+      background-posdsflagon: -3774px 0px;
+    }
+    &.dsflag__np {
+      height: 15px;
+      background-posdsflagon: -3796px 0px;
+    }
+    &.dsflag__nr {
+      height: 10px;
+      background-posdsflagon: -3811px 0px;
+    }
+    &.dsflag__nu {
+      height: 10px;
+      background-posdsflagon: -3833px 0px;
+    }
+    &.dsflag__nz {
+      height: 10px;
+      background-posdsflagon: -3855px 0px;
+    }
+    &.dsflag__om {
+      height: 10px;
+      background-posdsflagon: -3877px 0px;
+    }
+    &.dsflag__pa {
+      height: 14px;
+      background-posdsflagon: -3899px 0px;
+    }
+    &.dsflag__pe {
+      height: 14px;
+      background-posdsflagon: -3921px 0px;
+    }
+    &.dsflag__pf {
+      height: 14px;
+      background-posdsflagon: -3943px 0px;
+    }
+    &.dsflag__pg {
+      height: 15px;
+      background-posdsflagon: -3965px 0px;
+    }
+    &.dsflag__ph {
+      height: 10px;
+      background-posdsflagon: -3987px 0px;
+    }
+    &.dsflag__pk {
+      height: 14px;
+      background-posdsflagon: -4009px 0px;
+    }
+    &.dsflag__pl {
+      height: 13px;
+      background-posdsflagon: -4031px 0px;
+    }
+    &.dsflag__pm {
+      height: 14px;
+      background-posdsflagon: -4053px 0px;
+    }
+    &.dsflag__pn {
+      height: 10px;
+      background-posdsflagon: -4075px 0px;
+    }
+    &.dsflag__pr {
+      height: 14px;
+      background-posdsflagon: -4097px 0px;
+    }
+    &.dsflag__ps {
+      height: 10px;
+      background-posdsflagon: -4119px 0px;
+    }
+    &.dsflag__pt {
+      height: 14px;
+      background-posdsflagon: -4141px 0px;
+    }
+    &.dsflag__pw {
+      height: 13px;
+      background-posdsflagon: -4163px 0px;
+    }
+    &.dsflag__py {
+      height: 11px;
+      background-posdsflagon: -4185px 0px;
+    }
+    &.dsflag__qa {
+      height: 8px;
+      background-posdsflagon: -4207px 0px;
+    }
+    &.dsflag__re {
+      height: 14px;
+      background-posdsflagon: -4229px 0px;
+    }
+    &.dsflag__ro {
+      height: 14px;
+      background-posdsflagon: -4251px 0px;
+    }
+    &.dsflag__rs {
+      height: 14px;
+      background-posdsflagon: -4273px 0px;
+    }
+    &.dsflag__ru {
+      height: 14px;
+      background-posdsflagon: -4295px 0px;
+    }
+    &.dsflag__rw {
+      height: 14px;
+      background-posdsflagon: -4317px 0px;
+    }
+    &.dsflag__sa {
+      height: 14px;
+      background-posdsflagon: -4339px 0px;
+    }
+    &.dsflag__sb {
+      height: 10px;
+      background-posdsflagon: -4361px 0px;
+    }
+    &.dsflag__sc {
+      height: 10px;
+      background-posdsflagon: -4383px 0px;
+    }
+    &.dsflag__sd {
+      height: 10px;
+      background-posdsflagon: -4405px 0px;
+    }
+    &.dsflag__se {
+      height: 13px;
+      background-posdsflagon: -4427px 0px;
+    }
+    &.dsflag__sg {
+      height: 14px;
+      background-posdsflagon: -4449px 0px;
+    }
+    &.dsflag__sh {
+      height: 10px;
+      background-posdsflagon: -4471px 0px;
+    }
+    &.dsflag__si {
+      height: 10px;
+      background-posdsflagon: -4493px 0px;
+    }
+    &.dsflag__sj {
+      height: 15px;
+      background-posdsflagon: -4515px 0px;
+    }
+    &.dsflag__sk {
+      height: 14px;
+      background-posdsflagon: -4537px 0px;
+    }
+    &.dsflag__sl {
+      height: 14px;
+      background-posdsflagon: -4559px 0px;
+    }
+    &.dsflag__sm {
+      height: 15px;
+      background-posdsflagon: -4581px 0px;
+    }
+    &.dsflag__sn {
+      height: 14px;
+      background-posdsflagon: -4603px 0px;
+    }
+    &.dsflag__so {
+      height: 14px;
+      background-posdsflagon: -4625px 0px;
+    }
+    &.dsflag__sr {
+      height: 14px;
+      background-posdsflagon: -4647px 0px;
+    }
+    &.dsflag__ss {
+      height: 10px;
+      background-posdsflagon: -4669px 0px;
+    }
+    &.dsflag__st {
+      height: 10px;
+      background-posdsflagon: -4691px 0px;
+    }
+    &.dsflag__sv {
+      height: 12px;
+      background-posdsflagon: -4713px 0px;
+    }
+    &.dsflag__sx {
+      height: 14px;
+      background-posdsflagon: -4735px 0px;
+    }
+    &.dsflag__sy {
+      height: 14px;
+      background-posdsflagon: -4757px 0px;
+    }
+    &.dsflag__sz {
+      height: 14px;
+      background-posdsflagon: -4779px 0px;
+    }
+    &.dsflag__ta {
+      height: 10px;
+      background-posdsflagon: -4801px 0px;
+    }
+    &.dsflag__tc {
+      height: 10px;
+      background-posdsflagon: -4823px 0px;
+    }
+    &.dsflag__td {
+      height: 14px;
+      background-posdsflagon: -4845px 0px;
+    }
+    &.dsflag__tf {
+      height: 14px;
+      background-posdsflagon: -4867px 0px;
+    }
+    &.dsflag__tg {
+      height: 13px;
+      background-posdsflagon: -4889px 0px;
+    }
+    &.dsflag__th {
+      height: 14px;
+      background-posdsflagon: -4911px 0px;
+    }
+    &.dsflag__tj {
+      height: 10px;
+      background-posdsflagon: -4933px 0px;
+    }
+    &.dsflag__tk {
+      height: 10px;
+      background-posdsflagon: -4955px 0px;
+    }
+    &.dsflag__tl {
+      height: 10px;
+      background-posdsflagon: -4977px 0px;
+    }
+    &.dsflag__tm {
+      height: 14px;
+      background-posdsflagon: -4999px 0px;
+    }
+    &.dsflag__tn {
+      height: 14px;
+      background-posdsflagon: -5021px 0px;
+    }
+    &.dsflag__to {
+      height: 10px;
+      background-posdsflagon: -5043px 0px;
+    }
+    &.dsflag__tr {
+      height: 14px;
+      background-posdsflagon: -5065px 0px;
+    }
+    &.dsflag__tt {
+      height: 12px;
+      background-posdsflagon: -5087px 0px;
+    }
+    &.dsflag__tv {
+      height: 10px;
+      background-posdsflagon: -5109px 0px;
+    }
+    &.dsflag__tw {
+      height: 14px;
+      background-posdsflagon: -5131px 0px;
+    }
+    &.dsflag__tz {
+      height: 14px;
+      background-posdsflagon: -5153px 0px;
+    }
+    &.dsflag__ua {
+      height: 14px;
+      background-posdsflagon: -5175px 0px;
+    }
+    &.dsflag__ug {
+      height: 14px;
+      background-posdsflagon: -5197px 0px;
+    }
+    &.dsflag__um {
+      height: 11px;
+      background-posdsflagon: -5219px 0px;
+    }
+    &.dsflag__un {
+      height: 14px;
+      background-posdsflagon: -5241px 0px;
+    }
+    &.dsflag__us {
+      height: 11px;
+      background-posdsflagon: -5263px 0px;
+    }
+    &.dsflag__uy {
+      height: 14px;
+      background-posdsflagon: -5285px 0px;
+    }
+    &.dsflag__uz {
+      height: 10px;
+      background-posdsflagon: -5307px 0px;
+    }
+    &.dsflag__va {
+      height: 15px;
+      background-posdsflagon: -5329px 0px;
+    }
+    &.dsflag__vc {
+      height: 14px;
+      background-posdsflagon: -5346px 0px;
+    }
+    &.dsflag__ve {
+      height: 14px;
+      background-posdsflagon: -5368px 0px;
+    }
+    &.dsflag__vg {
+      height: 10px;
+      background-posdsflagon: -5390px 0px;
+    }
+    &.dsflag__vi {
+      height: 14px;
+      background-posdsflagon: -5412px 0px;
+    }
+    &.dsflag__vn {
+      height: 14px;
+      background-posdsflagon: -5434px 0px;
+    }
+    &.dsflag__vu {
+      height: 12px;
+      background-posdsflagon: -5456px 0px;
+    }
+    &.dsflag__wf {
+      height: 14px;
+      background-posdsflagon: -5478px 0px;
+    }
+    &.dsflag__ws {
+      height: 10px;
+      background-posdsflagon: -5500px 0px;
+    }
+    &.dsflag__xk {
+      height: 15px;
+      background-posdsflagon: -5522px 0px;
+    }
+    &.dsflag__ye {
+      height: 14px;
+      background-posdsflagon: -5544px 0px;
+    }
+    &.dsflag__yt {
+      height: 14px;
+      background-posdsflagon: -5566px 0px;
+    }
+    &.dsflag__za {
+      height: 14px;
+      background-posdsflagon: -5588px 0px;
+    }
+    &.dsflag__zm {
+      height: 14px;
+      background-posdsflagon: -5610px 0px;
+    }
+    &.dsflag__zw {
+      height: 10px;
+      background-posdsflagon: -5632px 0px;
+    }
+  }
